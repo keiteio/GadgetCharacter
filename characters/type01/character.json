@@ -1,0 +1,6 @@
+{
+  "id": "type01",
+  "name": "test",
+  "images": ["level01.png", "level02.png", "level03.png"],
+  "words": "words.json"
+}
