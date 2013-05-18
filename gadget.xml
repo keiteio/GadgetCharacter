@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<gadget>
+    <name>Test</name>
+    <namespace>Example.gadgets</namespace>
+    <version>1.0.0.0</version>
+    <author name="ナイトメア">
+        <info url="www.example.com" />
+    </author>
+    <copyright>2013</copyright>
+    <description>テストガジェット</description>
+    <hosts>
+        <host name="sidebar">
+          <base type="HTML" apiVersion="1.0.0" src="HelloWorld.htm" />
+          <permissions>full</permissions>
+          <platform minPlatformVersion="0.3" />
+        </host>
+    </hosts>
+</gadget>
