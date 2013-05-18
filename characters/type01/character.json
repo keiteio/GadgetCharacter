@@ -2,7 +2,7 @@
   "id": "type01",
   "name": "test",
   "level_max": 3,
-  "level_up_value": [0, 1000.0, 5000.0],
+  "level_up_value": [0, 1.0, 5.0],
   "images": ["level01.png", "level02.png", "level03.png"],
   "words": "words.json"
 }

@@ -9,6 +9,10 @@ function changeCharacterImage(character){
   $("#imgBackground").attr("src", img_src);
 }
 
+function updateCharacter(){
+  changeCharacterImage( current_character() );
+}
+
 function showMessage(){
   System.Gadget.Flyout.file = "balloon.html";
   System.Gadget.Flyout.show = true;
@@ -16,11 +20,9 @@ function showMessage(){
   System.Gadget.Settings.write("character_level", current_character().level);
 }
 
-current_character().level = 0 // <= あとで消す
-
 $(document).ready(function(){
   current_character().base = loadCharacter("type01");
-  //$("#hw").text(character.base);//loadCharacter("type01").name);
-  changeCharacterImage( current_character() );
-  showMessage();
+  //$("#test_id").text(current_character().base.level_up_value);//loadCharacter("type01").name);
+  updateCharacter();
+  //showMessage();
 });
