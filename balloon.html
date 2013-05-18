@@ -1,0 +1,39 @@
+<html>
+<head>
+  <script type="text/javascript" src="scripts/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="scripts/common.js"></script>
+</head>
+<body style="margin:0;width:200px;height:240px;">
+  <g:background id="imgBackground" src="images/balloon.png">
+    <p id="message"></p>
+  </g:background>
+</body>
+<script type="text/javascript">
+
+function loadWords(character_base_id){
+  return getJsonFromFile(System.Gadget.path + "\\characters\\" + character_base_id + "\\words.json");
+}
+
+function getMessage(character_base_id, character_level){
+  var words = loadWords(character_base_id).words;
+  var msgs = new Array();
+  for(var i = 0; i < words.length; i++){
+    if(words[i].status == "level"){
+      if(character_level == words[i].threshold){
+        msgs.push( words[i].message )
+      }
+    }
+  }
+  var idx = Math.floor( Math.random() * msgs.length )
+  return words[idx].message;
+}
+
+$(document).ready(function(){
+  //var words = loadWords( current_character().base.id )
+  var character_base_id = System.Gadget.Settings.read("character_base_id");
+  var character_level = System.Gadget.Settings.read("character_level");
+  $("#message").text( getMessage(character_base_id, character_level) );
+});
+
+</script>
+</html>
