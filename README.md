@@ -13,12 +13,16 @@ Windows7用ガジェットでゴミファイルを食べて成長するキャラ
 
 
 ### CharacterBase
+- id : キャラクターのID。キャラクターディレクトリ名と同期させる必要がある
+- name : キャラクターの名前
 - level_max : 最大レベル
 - level_up_margin : そのレベルになるのに必要なファイルサイズの配列
 - images : 画像ファイルパスの配列
 - words : 台詞ファイル(JSON)パス
 
 ### Words
-- status : 対象となるステータス。
-- threshold : しきい値。ステータス値が閾値以上なら発言対象となる。
-- sentence : 文章。
+- id : 台詞のID
+- status : 対象となるステータス
+- threshold : しきい値。ステータス値が閾値以上なら発言対象となる
+- sentence : 文章
+
